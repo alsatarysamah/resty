@@ -1,6 +1,6 @@
 import React from 'react';
 
-import '../scss/form.scss';
+import './form.scss';
 
 function Form (props) {
 

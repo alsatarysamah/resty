@@ -1,4 +1,4 @@
-import  "../scss/results.scss"
+import  "./results.scss"
 function Results(props)
 {
     return (

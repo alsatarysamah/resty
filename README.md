@@ -8,7 +8,7 @@ A browser based API testing tool.
 
 [PR](https://github.com/alsatarysamah/resty/pull/1)
 
-![](./resty/public/resty.png)
+![](./public/resty.png)
 
 # Business Requirements
 

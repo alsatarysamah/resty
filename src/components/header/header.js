@@ -1,7 +1,7 @@
-
+import "./header.css"
 function Header(){
     return (
-        <header>
+        <header id="header">
           <h1>RESTy</h1>
         </header>
       );

@@ -1,45 +1,3 @@
-// $backgroundColor: #efefef;
-// $radius: 40%;
-
-// form {
-//   display: inline-block;
-//   margin: auto;
-//   width: 200px;
-//   margin-bottom: 100em;
-  
-//   label {
-//     display: flex;
-//     margin: 1rem 0;
-
-//     &.methods {
-//       span {
-       
-//         cursor: pointer;
-//         margin-right: 1rem;
-//         padding: .25rem .5rem;
-//         background: rgb(154, 50, 132);
-
-//         &:hover, &.active {
-//           background: #fff;
-//         }
-//       }
-//     }
-//   }
- 
-//   button{
-//     background: rgb(154, 50, 132);
-//   }
-// }
-// textarea{
-//   height: 100px;
-//   width: 250px;
-//   margin-top: 2px;
-//     margin-right: 20px;
-//     margin-bottom: 7000px;
-//     margin-left: 0px;
-//     // margin: auto;
-//     // position: fixed;
-// }
 
 
 $backgroundColor: #efefef;
@@ -81,9 +39,12 @@ textarea{
   height: 90px;
   justify-content: center;
   margin-left: 500px;
-  margin-top: 0px;
+  margin-top: 10px;
+  font-family: cursive;
   // background-color: aqua;
 }
 input{
+  font-family: cursive;
+  font-size: 15px;
   width: 30%;
 }

@@ -14,7 +14,13 @@ import axios from 'axios';
 
 
 function App (){
-  const [data,setdata]=useState(  );
+  const [data,setdata]=useState(
+    {
+      header:"header",
+      count:"0",
+      response:""
+    }
+  );
   const [divData,setdivData]=useState({
     method:"get",
     url:"https://pokeapi.co/api/v2/pokemon"

@@ -6,7 +6,7 @@ axios
         });
 
         https://catfact.ninja/fact
-        https://api.publicapis.org/entries
+        https://api.publicapis.org/entries/
 
         // if(requestParams.method=="post"){
     //   axios.delete("http://localhost:5000/restaurant/1").then((response)=>{

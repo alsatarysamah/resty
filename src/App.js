@@ -14,13 +14,7 @@ import axios from 'axios';
 
 
 function App (){
-  const [data,setdata]=useState(
-    {
-      header:"header",
-      count:"0",
-      response:""
-    }
-  );
+  const [data,setdata]=useState(  );
   const [divData,setdivData]=useState({
     method:"get",
     url:"https://pokeapi.co/api/v2/pokemon"
@@ -97,8 +91,8 @@ function App (){
       <React.Fragment>
         <Header />
         <Form handleApiCall={callApi} />
-        <div>Request Method: {divData.method}</div>
-        <div>URL: {divData.url}</div>
+        <div >Request Method: {divData.method}</div>
+        <div >URL: {divData.url}</div>
         <Results data={data} >hi</Results>
         <Footer />
       </React.Fragment>

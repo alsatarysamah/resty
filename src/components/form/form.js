@@ -18,13 +18,15 @@ const[body,setbody]=useState("");
     props.handleApiCall(formData);
   }
 const inputHandler=e=>{
+  console.log("hiiii");
   let x=document.getElementById("u").value;
+  console.log("url= ",x)
   seturl(x);
 }
   const handlebody=e=>{
-    // console.log("text");
+    console.log("text");
     let x=document.getElementById("body").value;
-    // console.log(x);
+    console.log(x);
     setbody(x);
   }
     return (
@@ -41,8 +43,10 @@ const inputHandler=e=>{
             <span id="put" onClick={()=>{setMethod("put");}}>PUT</span>
             <span id="delete" onClick={()=>{setMethod("delete");}}>DELETE</span>
           </label>
+         
         </form>
         <textarea id="body" onInput={handlebody} placeholder='name=samah'></textarea>
+        
       </>
     );
   

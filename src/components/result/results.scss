@@ -13,11 +13,17 @@
 //     border-bottom-color: red;
 // }
 section{
-    border: 2px solid rgb(154, 50, 132);
-    background-color: white;
+    
+    // background-color: white;
+    // border: 2px solid rgb(154, 50, 132);
     height: 270px;
+    text-align: justify;
 }
 pre{
+    height: auto;
+    height: max-content;
+    border: 2px solid rgb(154, 50, 132);
     text-align: justify;
+    margin-bottom: 100px;
     // position: fixed;
 }

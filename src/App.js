@@ -11,18 +11,17 @@ import Footer from './components/footer/footer';
 import Form from './components/form/form';
 import Results from './components/result/results';
 import axios from 'axios';
-// import { count } from 'console';
-// import callApi from "./hooks/callApi";
+
 
 function App (){
   const [data,setdata]=useState(
     {
       header:"header",
       count:"0",
-      data:""
+      response:""
     }
   );
-  const [requestParams,setrequestParams]=useState({
+  const [divData,setdivData]=useState({
     method:"get",
     url:"https://pokeapi.co/api/v2/pokemon"
 
@@ -89,7 +88,7 @@ function App (){
 
     });
   }
-    setrequestParams(requestParams);
+    setdivData(requestParams);
   }
 
   return(
@@ -98,8 +97,8 @@ function App (){
       <React.Fragment>
         <Header />
         <Form handleApiCall={callApi} />
-        <div>Request Method: {requestParams.method}</div>
-        <div>URL: {requestParams.url}</div>
+        <div>Request Method: {divData.method}</div>
+        <div>URL: {divData.url}</div>
         <Results data={data} >hi</Results>
         <Footer />
       </React.Fragment>

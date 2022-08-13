@@ -2,8 +2,11 @@
 A browser based API testing tool.
 
 # UML
+[liveURL](https://kr22c5-3000.preview.csb.app/)
 
-[PR]()
+
+[PR](https://github.com/alsatarysamah/resty/pull/4)
+
 ![](./public/resty.png)
 
 # Business Requirements

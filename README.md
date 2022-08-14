@@ -4,6 +4,7 @@ A browser based API testing tool.
 # UML
 [liveURL](https://kr22c5-3000.preview.csb.app/)
 
+[liveURLOnGithub](https://alsatarysamah.github.io/resty/)
 
 [PR](https://github.com/alsatarysamah/resty/pull/4)
 
@@ -49,3 +50,12 @@ Uses best practices for testing Behaviors and Acceptance Criteria
 Integrates with an online CI framework
 
 Deploy to GitHub Pages, Netlify, and/or AWS
+
+# Phase 3
+ State and Props
+
+Create multiple components to handle each aspect of the Application
+
+Sharing state and behaviors between components
+
+Basic layout and styling

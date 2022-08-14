@@ -50,3 +50,12 @@ Uses best practices for testing Behaviors and Acceptance Criteria
 Integrates with an online CI framework
 
 Deploy to GitHub Pages, Netlify, and/or AWS
+
+# Phase 3
+ State and Props
+
+Create multiple components to handle each aspect of the Application
+
+Sharing state and behaviors between components
+
+Basic layout and styling

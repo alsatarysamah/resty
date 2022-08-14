@@ -1,5 +1,5 @@
 
-import React, { useState } from 'react';
+import React, { useState,useEffect } from 'react';
 // import axios from "axios";
 
 import './scss/app.scss';
@@ -27,6 +27,10 @@ function App (){
 
   });
   // const callApiF=callApi();
+  useEffect(()=>{
+    console.log("hi");
+    setdata({status:"loading"});
+  },[divData])
   
   const  callApi = (requestParams)=>  {
   ///////////////////get//////////////////////

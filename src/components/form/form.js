@@ -45,7 +45,9 @@ const inputHandler=e=>{
           </label>
          
         </form>
-        <textarea id="body" onInput={handlebody} placeholder='name=samah'></textarea>
+        {method=="post"||method=="put"?
+        <textarea id="body" onInput={handlebody} placeholder='name=samah'></textarea>:null
+}
         
       </>
     );

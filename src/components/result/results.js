@@ -1,11 +1,15 @@
 import  "./results.scss";
 import React  from "react";
-import JSONPretty  from 'react-json-pretty';
+// import JSONPretty ,{JSONPrettyMon} from 'react-json-pretty';
 function Results(props)
 {
     return (
         <section>
-          <JSONPretty id="json-pretty" data={props.data} ></JSONPretty>
+          <pre>{props.data ? JSON.stringify(props.data, undefined, 2) : <p>no response</p>}
+          </pre>
+          {/* <div></div> */}
+          {/* <JSONPretty id="json-pretty" data={props.data} ></JSONPretty> */}
+          {/* {React.createElement(JSONPretty, { json: props.data} )} */}
         </section>
       );   
 }

@@ -99,7 +99,7 @@ function App (){
         <Form handleApiCall={callApi} />
         <div >Request Method: {divData.method}</div>
         <div >URL: {divData.url}</div>
-        <Results data={data} >hi</Results>
+       <Results data={data} ></Results>
         <Footer />
       </React.Fragment>
   

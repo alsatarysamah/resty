@@ -1,3 +1,5 @@
+
+// import 'react-json-pretty/themes/monikai.css';
 // pre {
 //     display: solid;
 //     font-family: monospace;
@@ -19,7 +21,8 @@ section{
     height: 270px;
     text-align: justify;
 }
-pre{
+#json-pretty{
+    value: {color: red;}
     height: auto;
     height: max-content;
     border: 2px solid rgb(154, 50, 132);
@@ -27,3 +30,27 @@ pre{
     margin-bottom: 100px;
     // position: fixed;
 }
+
+  .__json-key__
+  {color: rgb(70, 8, 145);}
+    
+
+  .__json-value__
+  {
+    color: rgba(253,176,130,1);
+  }
+    
+
+  .__json-string__{
+    color :rgb(77, 159, 14);}
+
+  .__json-boolean__{
+    color: rgba(102,153,204,1);}
+
+.__json-pretty-error__
+{
+  line-height: 1.3px;
+  color: rgba(248,248,242,1);
+  background :#1e1e1e;
+  overflow: auto;
+  }

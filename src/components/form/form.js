@@ -34,11 +34,11 @@ const inputHandler=e=>{
         <form onSubmit={handleSubmit}>
           <label >
             <span>URL: </span>
-            <input name='url' type='text' id="u" onInput={inputHandler} />
-            <button type="submit">GO!</button>
+            <input name='url' type='text' id="u" onInput={inputHandler} data-testid="url"/>
+            <button type="submit" data-testid="go">GO!</button>
           </label>
           <label className="methods">
-            <span id="get" onClick={()=>{setMethod("get");}}>GET</span>
+            <span id="get" onClick={()=>{setMethod("get");}} data-testid="get">GET</span>
             <span id="post" onClick={()=>{setMethod("post");}}>POST</span>
             <span id="put" onClick={()=>{setMethod("put");}}>PUT</span>
             <span id="delete" onClick={()=>{setMethod("delete");}}>DELETE</span>
@@ -46,7 +46,7 @@ const inputHandler=e=>{
          
         </form>
         {method=="post"||method=="put"?
-        <textarea id="body" onInput={handlebody} placeholder='name=samah'></textarea>:null
+        <textarea id="body" onInput={handlebody} placeholder='name=samah'  ></textarea>:null
 }
         
       </>

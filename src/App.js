@@ -26,6 +26,7 @@ function App (){
     url:"https://pokeapi.co/api/v2/pokemon"
 
   });
+  // const[status,setStauts]
   // const callApiF=callApi();
   useEffect(()=>{
     console.log("hi");
@@ -101,9 +102,9 @@ function App (){
       <React.Fragment>
         <Header />
         <Form handleApiCall={callApi} />
-        <div >Request Method: {divData.method}</div>
-        <div >URL: {divData.url}</div>
-       <Results data={data} ></Results>
+        <div data-testid="method">Request Method: {divData.method}</div>
+        <div data-testid="urlDiv" >URL: {divData.url}</div>
+      {<Results data={data} ></Results>} 
         <Footer />
       </React.Fragment>
   

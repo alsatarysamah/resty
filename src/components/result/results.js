@@ -5,7 +5,7 @@ function Results(props)
 {
     return (
         <section>
-          <pre>{props.data ? JSON.stringify(props.data, undefined, 2) : null}
+          <pre>{props.data ? JSON.stringify(props.data, undefined, 2) : <p>no response</p>}
           </pre>
           {/* <div></div> */}
           {/* <JSONPretty id="json-pretty" data={props.data} ></JSONPretty> */}

@@ -26,7 +26,9 @@ function App() {
     method: "",
     // url: "",
   });
- 
+   const callHistory=(divData,data)=>{
+
+ }
   useEffect(() => {
     // console.log("hi");
     // setdata(x(divData));
@@ -128,9 +130,9 @@ function App() {
         <Header />
         <div id="history">
         <Form handleApiCall={callApi} />
-        {
-        history?
-        <History history={history}></History>:null}
+        
+        
+        <History history={history}></History>
         </div>
           <div>
         <div data-testid="method">Request Method: {divData.method}</div>

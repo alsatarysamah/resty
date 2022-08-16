@@ -1,8 +1,8 @@
-const first=[{
+const first={
     url:"",
     method:"",
     result:[]
-}]
+}
 export default function historyReducer(state=first,action){
 const {type,payload}=action;
 // console.log("rrrrrrrrrrrr",payload.data);

@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect,useReducer } from "react";
 // import axios from "axios";
 
 import "./scss/app.scss";
@@ -9,26 +9,32 @@ import Header from "./components/header/header";
 import Footer from "./components/footer/footer";
 import Form from "./components/form/form";
 import Results from "./components/result/results";
+import History from "./components/history/history";
 import axios from "axios";
-
+import historyReducer,{add} from "./hooks/reducer"
+const first=[{
+  url:"",
+  method:"",
+  result:[]
+}]
 function App() {
+  const [history,dispatch]=useReducer(historyReducer,first)
   const [data, setdata] = useState({
     response: "  ",
   });
   const [divData, setdivData] = useState({
-    method: "get",
+    method: "",
     // url: "",
   });
  
   useEffect(() => {
-    console.log("hi");
+    // console.log("hi");
+    // setdata(x(divData));
     ///////////get////////////////////
     if (divData.method == "get") {
       axios
         .get(divData.url)
         .then((data) => {
-          // result=data.data;
-          // data.data.length
           const formData = {
             header: data.headers,
             count: data.data.length,
@@ -66,7 +72,7 @@ function App() {
       axios
         .delete(divData.url)
         .then((data) => {
-          console.log("oooooooooo  ",data.data);
+          // console.log("oooooooooo  ",data.data);
           const formData = {
             header: data.headers,
             count: 1,
@@ -98,21 +104,39 @@ function App() {
           setdata({stauts:"loading..."})
         });
     }
+    const last ={
+      divData:divData,
+      data:data
+    }
+    dispatch(add(last));
+    // return(setdata({body:""}))
   }, [divData]);
-
+  useEffect(()=>{},[divData])
+// useEffect(()=>{
+//   return(setdata({}));
+// },{})
   const callApi = (requestParams) => {
     
     setdivData(requestParams);
-    setdata({});
+    
+    // setdata({});
   };
 
   return (
     <>
       <React.Fragment>
         <Header />
+        <div id="history">
         <Form handleApiCall={callApi} />
+        {
+        history?
+        <History history={history}></History>:null}
+        </div>
+          <div>
         <div data-testid="method">Request Method: {divData.method}</div>
         <div data-testid="urlDiv">URL: {divData.url}</div>
+        </div>
+        
         {<Results data={data}></Results>}
         <Footer />
       </React.Fragment>

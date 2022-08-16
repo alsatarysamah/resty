@@ -13,5 +13,6 @@ function Results(props)
         </section>
       );   
 }
+// const formattedBody = JSON.stringify(JSON.parse(e.target.value), null, 4);
 
 export default Results;

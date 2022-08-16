@@ -11,7 +11,11 @@ html, body {
 body {
   background: $backgroundColor;
   height: 100%;
-
+#history{
+  display: flex;
+    flex-direction: row-reverse;
+    height: 100px;
+}
   #root {
     display: flex;
     flex-direction: column;

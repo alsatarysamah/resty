@@ -17,3 +17,8 @@ axios
     // }
 
     http://localhost:5000/restaurant
+
+    {
+"name":"soso",
+"delivery_fee":"5"
+}

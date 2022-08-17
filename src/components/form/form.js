@@ -18,16 +18,20 @@ const[body,setbody]=useState("");
     props.handleApiCall(formData);
   }
 const inputHandler=e=>{
-  console.log("hiiii");
+  // console.log("hiiii");
   let x=document.getElementById("u").value;
-  console.log("url= ",x)
+  // console.log("url= ",x)
   seturl(x);
 }
   const handlebody=e=>{
-    console.log("text");
+    // console.log("text");
     let x=document.getElementById("body").value;
-    console.log(x);
+    // console.log("xxxxxxxxxxxx",x);
+    // const formattedBody = JSON.stringify(, null, 4);
+    // const formattedBody = JSON.stringify(JSON.parse(x), null, 4);
+    // console.log(formattedBody);
     setbody(x);
+    // console.log("(((((((((((",body);
   }
     return (
       <>
@@ -43,11 +47,11 @@ const inputHandler=e=>{
             <span id="put" onClick={()=>{setMethod("put");}}>PUT</span>
             <span id="delete" onClick={()=>{setMethod("delete");}}>DELETE</span>
           </label>
-         
-        </form>
-        {method=="post"||method=="put"?
+          {method=="post"||method=="put"?
         <textarea id="body" onInput={handlebody} placeholder='name=samah'  ></textarea>:null
 }
+        </form>
+        
         
       </>
     );

@@ -1,33 +1,52 @@
 import "./history.css";
 export default  function History(props) {
-
+  // import {useState} from 'react';
   let urlAarr=[{}];
-  
-  for(let i=5;i<props.history.length;i++)
+  let isHovering=false;
+  for(let i=1;i<props.history.length;i++)
   {
-   
+   if(props.history[i][0].url!="")
     urlAarr.push({
       url:props.history[i][0].url,
 method:props.history[i][0].method,
 data:props.history[i][0].result
     })
   }
-  const  HistoryHandler= (e,method)=>{
-    console.log(method);
+  const  handler= (e,method,url,data)=>{
+    isHovering=true;
+    props.isClicked(true);
+    // console.log("click",data);
     const formData = {
-      // url:url
+      url:url,
+      method:method,
+      data:data
     };
+   
+    props.historyHandler(formData);
+    props.isClicked(true);
+    
+    
   }
+  
+
+  const handleMouseEnter = () => {
+    isHovering=true;
+  };
+
+  const handleMouseLeave = () => {
+    isHovering=false;
+  };
   return(
     <div id="his1">
     <h7>history</h7>
-    <div id="5"   >
+    <div id="his"   >
     {
     urlAarr.map((one,index) => {
-      //one.method,one.url,one.data
+      // {console.log(one);}
+      if(one.method)
         return (
-          <div key={index} onClick={(e)=>{HistoryHandler(e,one.method,one.url,one.data)}} 
-          
+          <div key={index} onClick={(e)=>{handler(e,one.method,one.url,one.data)}} 
+         
           >
             <p>method: {one.method}</p>
           <p>url: {one.url}</p>

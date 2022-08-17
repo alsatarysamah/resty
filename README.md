@@ -59,3 +59,13 @@ Create multiple components to handle each aspect of the Application
 Sharing state and behaviors between components
 
 Basic layout and styling
+
+# Phase 4: Fit and Finish
+
+Incorporate the spinner, using conditional rendering
+
+App is Fully Tested
+
+App is Fully Documented
+
+RESTy is Deployed and publicly available

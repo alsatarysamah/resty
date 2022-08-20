@@ -25,7 +25,7 @@ function App() {
     response: "  ",
   });
   const [divData, setdivData] = useState({
-    // method: "",
+    method: "get",
     // url: "",
   });
   const [isHistory, setIsHistory] = useState(false);

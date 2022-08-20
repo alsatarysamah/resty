@@ -3,7 +3,7 @@ import { useState } from "react";
 import "./form.scss";
 
 function Form(props) {
-  const [method, setMethod] = useState();
+  const [method, setMethod] = useState("get");
   const [apiUrl, seturl] = useState();
   const [body, setbody] = useState();
   const handleSubmit = (e) => {
